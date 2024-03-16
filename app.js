@@ -43,13 +43,13 @@ clrBtn.addEventListener("click", (e) => {
   }
   currentValue = 0;
   countText.innerHTML = `Your Current Count is : <div class="ans">${currentValue}</div>`;
+  clrBtn.style.display = "none";
 });
 
 function checkValClear() {
-  const clearBtn = document.querySelector(".clr-btn");
   if (currentValue > 1) {
-    clearBtn.style.display = "block";
-  } else if(currentValue<1){
-    clearBtn.style.display = "none";
+    clrBtn.style.display = "block";
+  } else if (currentValue < 1) {
+    clrBtn.style.display = "none";
   }
 }
